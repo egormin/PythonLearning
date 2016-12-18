@@ -114,6 +114,8 @@ print(5 == 5)#true (Equal)
 print(5 != 5)#false (Not equal)
 print(2 is 2) #True The same place in memory
 print(id(a)) #Show place in memory(for ex. 18668160)
+print(2<5<=8) #true
+print(2==5==6)#false
 
 
 
