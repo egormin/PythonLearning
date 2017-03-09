@@ -112,6 +112,17 @@ print(int_list)  # [1, 2, 3, 4]
 del int_list[2]
 print(int_list)  # # [1, 2, 4]
 
+print([1, 2, 3]+[4, 5, 6])   # [1, 2, 3, 4, 5, 6]
+
+spis1 = [1, 2, 3]
+spis2 = [4, 5, 6]
+print(spis1 + spis2)    # [1, 2, 3, 4, 5, 6]
+
+
+spis1 = ['one']
+spis2 = spis1 * 5
+print(spis2)       # ['one', 'one', 'one', 'one', 'one']
+
 
 # 7) Obhod elementov spiska
 print("\n***** Obhod elementov spiska *****")

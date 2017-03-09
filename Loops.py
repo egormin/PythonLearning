@@ -122,3 +122,7 @@ for i in range(0, 10):
     print(i)
 else:
     print("Finished")
+
+# 12) Eschyo odin variant cikla
+l = [i for i in range(10)]
+print(l)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

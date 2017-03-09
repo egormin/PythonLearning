@@ -118,6 +118,24 @@ print(2<5<=8) #true
 print(2==5==6)#false
 
 
+# 16) Mnozhestvennye prisvoeniya
+a = b = c = 1
+print("{}, {}, {}".format(a, b, c))
+
+# 17) Mnozhestvennye prisvoeniya (eschio sposob)
+a, b, c = 1, 5, 'stringos'
+print("{}, {}, {}".format(a, b, c))
+
+# 18) Udalenie peremennyh
+del a
+# print("{}, {}, {}".format(a, b, c))  ERROR: NameError: name 'a' is not defined
+
+# 19) Preobrazovaniee peremennyh
+x = 5
+base = 6
+#int(x [,base]), float(x), str(x) chr(x), unichr(x), ord(x), hex(x), oct(x)
+
+
 
 
 

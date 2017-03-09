@@ -119,6 +119,13 @@ b = ["text", "also"]
 2115912146632
 >>>a is b #false
 
+# 13)One-line if
+a = False
+print("True") if a == True else print("False")
+
+var = 100
+if ( var == 100 ): print("Value of expression is 100")
+
 # Same objects
 >>> a = b
 >>> id (a)

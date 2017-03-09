@@ -119,3 +119,18 @@ def goods(item, color, price):
 
 goods('pen', 'black', '1$')
 
+
+# 10) Text as lists
+string = "Low Level Programming Department"
+print(string)  # Low Level Programming Department
+print(string[:1])  # L
+print(string[:-1])  # Low Level Programming Departmen
+print(string[1:])   # ow Level Programming Department
+print(string[4:])   # Level Programming Departmen
+print(string[4:8])  # Leve
+
+# 11) Ekranirovanie
+print('C:\\nowhere')   # C:\nowhere
+print(r'C:\\nowhere')  # C:\\nowhere
+print(u'C:\\nowhere')  # C:\nowhere
+#print(ur'C:\\nowhere')  #ERROR
