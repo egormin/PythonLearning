@@ -109,6 +109,38 @@ is_ready and "Ready" or "Not Ready yet"  # 'Not Ready yet'
 is_ready = True
 is_ready and "Ready" or "Not Ready yet"  # 'Ready'
 
+# 12)Also examples
+# Two different objects
+a = ["text", "also"]
+b = ["text", "also"]
+>>> id (a)
+2115912146504
+>>> id (b)
+2115912146632
+>>>a is b #false
+
+# Same objects
+>>> a = b
+>>> id (a)
+2115912146632
+>>> id (b)
+2115912146632
+>>> a is b
+True
+
+# Operator chlenstva
+p = (4, "frog", 9, -33, 9, 2)
+>>> 2 in p #True
+
+
+>>> phrase = "Peace is no longer permitted during Winterval"
+>>> "v" in phrase
+True
+>>> "ring" in phrase
+True
+
+
+
 
 
 

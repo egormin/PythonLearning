@@ -82,3 +82,40 @@ val2 = int(input("Enter second value: "))
 print("{} + {} = {}".format(val1, val2, val1 + val2))
 
 
+# 8) Higher and Lower letters
+a = "HelLo"
+print(a.lower())  # "hello"
+print(a.upper())  # "HELLO"
+print(len(a))     # 5
+
+# 8) Another operations
+print("Spam " + "and " + "eggs")  # Spam and eggs
+print("The value of pi is around " + str(3.14))  # The value of pi is around 3.14
+
+# 9) Tabulation
+print("***** Tabulation *****")
+
+def goods(item, color, price):
+    print("Item:", item)
+    print("Color:", color)
+    print("Price:", price)
+
+    """
+    Item: pen
+    Color: black
+    Price: 1$
+    """
+
+    print("Item:", item, sep="\t")
+    print("Color:", color, sep="\t")
+    print("Price:", price, sep="\t")
+
+# Text vyrovnyan
+    """
+   Item:	pen
+   Color:	black
+   Price:	1$
+    """
+
+goods('pen', 'black', '1$')
+

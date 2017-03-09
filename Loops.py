@@ -3,7 +3,6 @@
 # FOR
 # Not used DO-WHILE
 
-
 # 1) Loops
 count = 0
 while count < 10:
