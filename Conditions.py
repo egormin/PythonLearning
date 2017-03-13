@@ -32,6 +32,9 @@ x = 5
 if 0 < x < 7:
     print("ok")
 
+# Trehmestnoe virazhenie
+4 > 6 if print("Da") else print("Net")
+
 
 # 6)Vlozhennie usloviya
 print()

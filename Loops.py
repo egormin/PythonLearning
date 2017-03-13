@@ -126,3 +126,17 @@ else:
 # 12) Eschyo odin variant cikla
 l = [i for i in range(10)]
 print(l)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+# 12)ENUMERATE
+sequence = ["a", "b", "c", "d"]
+for idx, item in enumerate(sequence):
+    print(item, idx)
+  #  a 0
+  #  b 1
+  #  c 2
+  #  d 3
+
+
+sequence = ["a", "b", "c", "d"]
+print(list(enumerate(sequence)))  #  [(0, 'a'), (1, 'b'), (2, 'c'), (3, 'd')]

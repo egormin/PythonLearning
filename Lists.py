@@ -150,4 +150,28 @@ for i in range(n - 2):
     fibs.append(fibs[i] + fibs[i + 1])  # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 print(fibs)
 
+# 8) Operacii so spiskami
+print("\n***** Operacii so spiskami *****")
+# kopiya spiska
+spis1 = [1, 2, 3]
+spis2 = spis1[:]  #  ih id budut raznie
+
+# Sravnonie spiskov
+print(spis1 == spis2)  # sravnenie spiskov po znacheniyu
+print(spis1 is spis2)  # sravnenie spiskov po id
+
+# 9) Operacii so spiskami
+print("\n***** Objedinenie spiskov *****")
+spisok1 = [1, 2, 3]
+spisok2 = [1, 2, 5, 6]
+spisok3 = set(spisok1)  # Preobrazuem v mnozhestvo
+spisok4 = set(spisok2)
+print(spisok3 | spisok4)  #  {1, 2, 3, 5, 6}
+
+# Ili tak
+spisok1 = [1, 2, 3]
+spisok2 = [1, 2, 5, 6]
+Newspis = list((zip(spisok1, spisok2)))
+print(Newspis)  # [(1, 1), (2, 2), (3, 5)]  Objediniayutsya tak: (spis1[0], spis2[0]), (spis1[1], spis2[1]).....
+
 

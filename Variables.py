@@ -4,6 +4,9 @@ type(a)
 type("efsf")
 #<class 'str'>, <class 'int'>
 
+a1, *b1 = 'one', 'two', 'three'
+print("a1 = {}, b1 = {}".format(a1, b1))  # a1 = one, b1 = ['two', 'three']  *b - preobrazuetsya v spisok
+
 # 2)Convert binary to decimal
 0b11111111
 
