@@ -1,7 +1,6 @@
 ### 1) Simple Class:
 
 class MyObj:   # Klassy opisyvayut to, chem budut yavliatsia ego objekty
-    rrr="d"
     pass
 
 obj = MyObj()
@@ -65,34 +64,34 @@ print(lucy.name, "is", lucy.age)
 #Lucy is 18
 
 ### 5) Class attributes with self:
-class Person1:
+class Person2:
     def print_info(self):
         print(self.name, "is", self.age)
 
-john = Person1()
+john = Person2()
 john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio byavet attribut classa. On est' u vseh ekzemplyarov
 john.age = 22
 
-lucy = Person1()
+lucy = Person2()
 lucy.name = "Lucy"
 lucy.age = 18
 
-Person1.print_info(john)
-Person1.print_info(lucy)
+Person2.print_info(john)
+Person2.print_info(lucy)
 
 #John is 22  To zhe samoe
 #Lucy is 18
 
 ### 6) Class attributes with self (Mozhno i tak):
-class Person1:
+class Person3:
     def print_info(self):
         print(self.name, "is", self.age)
 
-john = Person1()
+john = Person3()
 john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio byavet attribut classa. On est' u vseh ekzemplyarov
 john.age = 22
 
-lucy = Person1()
+lucy = Person3()
 lucy.name = "Lucy"
 lucy.age = 18
 
@@ -101,4 +100,25 @@ lucy.print_info()
 
 #John is 22  I eto to zhe samoe
 #Lucy is 18
+
+
+### 6) Class attributes with self (Mozhno i tak):
+print("\n*** Example 6 ***")
+
+class Person4:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def print_info(self):
+        print(self.name, "is", self.age)
+
+john = Person4("John", 20)
+lucy = Person4("Lucy", 17)
+
+john.print_info()
+lucy.print_info()
+
+#John is 20  To zhe samoe
+#Lucy is 17  To zhe samoe
 
