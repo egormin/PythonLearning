@@ -51,7 +51,7 @@ class Person:
     pass
 
 john = Person()
-john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio byavet attribut classa. On est' u vseh ekzemplyarov
+john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio bivaet attribut classa. On est' u vseh ekzemplyarov
 john.age = 22
 
 lucy = Person()
@@ -69,7 +69,7 @@ class Person2:
         print(self.name, "is", self.age)
 
 john = Person2()
-john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio byavet attribut classa. On est' u vseh ekzemplyarov
+john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio bivaet attribut classa. On est' u vseh ekzemplyarov
 john.age = 22
 
 lucy = Person2()
@@ -88,7 +88,7 @@ class Person3:
         print(self.name, "is", self.age)
 
 john = Person3()
-john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio byavet attribut classa. On est' u vseh ekzemplyarov
+john.name = "John"     # Attribut dannyh. On est' tolko u ekzemplyara klassa. Eschio bivaet attribut classa. On est' u vseh ekzemplyarov
 john.age = 22
 
 lucy = Person3()
