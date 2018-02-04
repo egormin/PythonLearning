@@ -35,3 +35,27 @@ obj = Myobject()
 #obj.__private_value = 200              # Tak k private atributu obratitsya nelzya. Nado cherez metod setter
 obj.set_value(200)
 print(obj.get_value())                  # 200
+
+
+################################# 3) Svoistva objekta. Trebuetsya podderzhka yazyka. Bolee predpochtitelen.
+
+class Myobject:
+
+    def __init__(self):
+        self.__atribute = 0
+
+    @property
+    def atribute(self):
+        return self.__atribute
+
+    @atribute.setter                 # @atribute - takoe zhe kak i imya metoda v gettere
+    def atribute(self, value):
+        if value < 500:
+            self.__atribute = value
+
+
+obj = Myobject()
+print(obj.atribute)   # 0
+
+obj.atribute = 200    # 200
+print(obj.atribute)
