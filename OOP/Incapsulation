@@ -24,7 +24,8 @@ class Myobject:
         return self.__private_value
 
     def set_value(self, value):
-        self.__private_value = value
+        if value < 400:                 # Obychno osuschestvlyaetsya proverka znacheniya v settere
+            self.__private_value = value
 
 
 #print(Myobject().__private_value)      # Tak k private atributu obratitsya nelzya. Nado cherez metod getter
