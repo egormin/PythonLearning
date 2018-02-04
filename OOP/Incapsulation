@@ -1,4 +1,4 @@
-# 1) Private atributes
+################################# 1) Private atributes
 
 class Myobject:
 
@@ -12,3 +12,25 @@ class Myobject:
 obj = Myobject()
 print(obj.get_atribute())                 # 42
 print(obj._Myobject__private_attribute)   # Napryamuyu ego vyzvat nelzya, tolko dopisav _ + imya klassa + imya atributa
+
+################################# 2) Getters and setters
+
+class Myobject:
+
+    def __init__(self):
+        self.__private_value = 100
+
+    def get_value(self):
+        return self.__private_value
+
+    def set_value(self, value):
+        self.__private_value = value
+
+
+#print(Myobject().__private_value)      # Tak k private atributu obratitsya nelzya. Nado cherez metod getter
+print(Myobject().get_value())           # 100
+
+obj = Myobject()
+#obj.__private_value = 200              # Tak k private atributu obratitsya nelzya. Nado cherez metod setter
+obj.set_value(200)
+print(obj.get_value())                  # 200
