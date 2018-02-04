@@ -5,7 +5,7 @@ class Myobject:
     def __init__(self):
         self.__private_attribute = 42
 
-    def get_atribute(self):
+    def get_atribute(self):               # Getter
         return self.__private_attribute
 
 
