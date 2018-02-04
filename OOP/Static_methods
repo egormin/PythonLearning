@@ -1,0 +1,24 @@
+class MyObject:
+    class_atribute = 8             # atribut klassa
+
+    def __init__(self):            # funkciya konstruktor
+        self.data_atribute = 20    # atribut dannyh
+
+    def instance_method(self):
+        print(self.data_atribute)  # vozvraschaet atribut klassa
+
+    @staticmethod
+    def static_method():           # budet rabotat na klasse i vseh ego objektov
+        print(MyObject.class_atribute)
+
+
+if __name__ == "__main__":
+    MyObject.static_method()
+
+    obj = MyObject()
+    obj.instance_method()
+    obj.static_method()            # esli bi ne bylo @staticmethod, tut my poluchili by oshibku, t.k. python peredast ssilku na objekt v metod, a funkciya prinimaet 0 argumentov
+    
+# 8
+# 20
+# 8
