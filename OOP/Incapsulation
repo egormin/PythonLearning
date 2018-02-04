@@ -1,0 +1,14 @@
+# 1) Private atributes
+
+class Myobject:
+
+    def __init__(self):
+        self.__private_attribute = 42
+
+    def get_atribute(self):
+        return self.__private_attribute
+
+
+obj = Myobject()
+print(obj.get_atribute())                 # 42
+print(obj._Myobject__private_attribute)   # Napryamuyu ego vyzvat nelzya, tolko dopisav _ + imya klassa + imya atributa
