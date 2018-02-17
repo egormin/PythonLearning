@@ -64,7 +64,7 @@ print(number1 != number2)  # False
 print(number1 == number3)  # False 
 print(number1 != number3)  # True
 
-# Primer 3
+############### Primer 3
 """ Shablon SINGLETON.
 Garantiruet, chto dannyi klass imee tolko 1 ekzemplyar
 T.e. nam nado proverit ne sozdan li ekzemplyar dannogo klassa. Esli sozdan - propuskaem, esli net - sozdaem
@@ -91,3 +91,19 @@ print(obj1.value)  # some value
 
 obj2 = Singleton()
 print(obj1 is obj2)  # True  To zhe samoe, t.e. novyi objekt ne bil sozdan
+
+############### Primer 4
+class MyObject:
+    def __init__(self):
+        self.password = None
+
+    def __getattribute__(self, item):
+        if item == "secret_field" and self.password == "p@ss":  # nash peredelannyi
+            return "secret value"
+        else:
+            return object.__getattribute__(self.item)  # standartnyi metod
+
+obj = MyObject()
+print(obj.secret_field)  # Error. Takogo metoda net
+obj.password = "p@ss"
+print(obj.secret_field)  # secret value
