@@ -63,3 +63,31 @@ print(number1 != number2)  # False
 
 print(number1 == number3)  # False 
 print(number1 != number3)  # True
+
+# Primer 3
+""" Shablon SINGLETON.
+Garantiruet, chto dannyi klass imee tolko 1 ekzemplyar
+T.e. nam nado proverit ne sozdan li ekzemplyar dannogo klassa. Esli sozdan - propuskaem, esli net - sozdaem
+"""
+
+class Singleton:
+    _instance = None  # Eto nash ekzemplyar. On eschio ne sozdan
+
+    def __new__(cls):  # Klassovyi metod. V kachestve pervogo arg-ta prinimaet sam klass, a ne ego ekzempliar
+        if cls._instance is None: # proverka ne sozdan li eschio ekzemplyar dannogo klassa
+            cls._instance = object.__new__(cls)  # esli net - sozdaem
+
+        return cls._instance
+
+    def __init__(self):
+        self.value = "some value"
+
+print(Singleton._instance)  # None  Ekzemplyar ne sozdan
+
+obj1 = Singleton()
+print(Singleton._instance)  # <__main__.Singleton object at 0x7f905d5f4320> poyavilsya instance
+
+print(obj1.value)  # some value
+
+obj2 = Singleton()
+print(obj1 is obj2)  # True  To zhe samoe, t.e. novyi objekt ne bil sozdan
