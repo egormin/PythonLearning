@@ -1,1 +1,65 @@
+############### Primer 1
+class Complex:
+    def __init__(self, real=0.0, imaginary=0.0):
+        self.real = real
+        self.imaginary = imaginary
 
+    def __repr__(self):
+        return "Complex({!r}, {!r})".format(self.real, self.imaginary)
+
+    def __str__(self):
+        return "{}{:+d}i".format(self.real, self.imaginary)
+
+# Esli vyzavat prosto c (cherez console)
+c = Complex(2, 5)
+c                    # Complex(2, 5) Budet vyzvan repr   
+print(type(c))       # 2+5i          Budet vyzvan str
+
+
+############### Primer 2
+class Complex:
+    def __init__(self, real=0.0, imaginary=0.0):
+        self.real = real
+        self.imaginary = imaginary
+
+    def __repr__(self):
+        return "Complex({!r}, {!r})".format(self.real, self.imaginary)
+
+    def __str__(self):
+        return "{}{:+d}i".format(self.real, self.imaginary)
+
+    def __add__(self, other):  # slozhenie
+        return Complex(self.real + other.real, self.imaginary + other.imaginary)
+
+    def __neg__(self):         # izmenenie znaka chisla
+        return Complex(-self.real, -self.imaginary)
+
+    def __sub__(self, other):  # vichitanie
+        return self + (-other)
+
+    def __abs__(self):
+        return (self.real ** 2 + self.imaginary ** 2) ** 0.5
+
+    def __eq__(self, other):
+        return self.real == other.real and self.imaginary == other.imaginary
+
+
+Complex(2, 3) + Complex(2, -1)          # Complex(4, 2)
+print(Complex(2, 3) + Complex(2, -1))   # 4+2i
+print(Complex(2, 3) - Complex(1, 1))    # 1+2i
+
+print(Complex(5, 6).__neg__())          # -5-6i
+
+print(abs(complex(2, 3)))               # 3.605551275463989 pitonovskiy kompleks
+print(Complex(2, 3).__abs__())          # 3.605551275463989 nash kompleks
+
+number1 = Complex(2, 3)
+number2 = Complex(2, 3)
+print(number1 == number2)  # False  Tak kak dlya nashego klassa ne opredelion metod __eq__
+
+number3 = Complex(4, 5)
+print(number1 == number2)  # True Tak kak mi dobavili __eq__ v svoy klass
+print(number1 != number2)  # False
+
+print(number1 == number3)  # False 
+print(number1 != number3)  # True
