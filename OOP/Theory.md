@@ -120,30 +120,3 @@ ________________________________________________________________________________
 str - строковое представление для пользователя.
 repr - строковое представление для разработчика
 ```
-
-
-<details>
-<summary>Details</summary>
-
-**Browser**
-
-> IMPORTANT: replace the `src` with the full version link and desired target spec (such as ES5 minified)):
-
-```html
-<script src="https://unpkg.com/30-seconds-of-code"></script>
-<script>
-  _30s.average(1, 2, 3);
-</script>
-```
-
-
-
-
-
-
-
-
-
-
-
-
