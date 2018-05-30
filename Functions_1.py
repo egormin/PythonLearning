@@ -152,7 +152,13 @@ f2(arg)
 print(arg)  # 1
 
 # 12) Closures (замыкания)
+def outer(a):
+    def inner(b):
+        return a + b
+    return inner
 
+closure = outer(1)
+print(closure(2))    # 3
 
 
 
