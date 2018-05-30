@@ -62,6 +62,15 @@ print("I have {one} and {two} apples".format(one=1, two=2))
 
 print(f"I have {i} apples")   # Available from Python 3.6
 
+# Templates:  (https://docs.python.org/3/library/string.html)
+from string import Template
+s = Template('$who likes $what')
+str = s.substitute(who='tim', what='kung pao')
+print(str)  # tim likes kung pao
+
+# print in file
+print(1, 2, 3, sep='-', end=';', file=sys.stdout, flush=False)   # Not bufferiring
+
 # 6) Print format
 print(2, 3, 5)  # 2 3 5 (space by default)
 print(2, 3, 5, sep=":")  # 2:3:5
