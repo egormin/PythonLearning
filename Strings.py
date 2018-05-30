@@ -60,6 +60,8 @@ res = 'number={:f}'.format(17)  # number=17.000000
 print(res)
 print("I have {one} and {two} apples".format(one=1, two=2))
 
+print(f"I have {i} apples")   # Available from Python 3.6
+
 # 6) Print format
 print(2, 3, 5)  # 2 3 5 (space by default)
 print(2, 3, 5, sep=":")  # 2:3:5
