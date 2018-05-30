@@ -101,6 +101,59 @@ def new_style(i: int, s:str) -> bool:   # first param should be int, second stri
 
 print(new_style(0, 'abc'))  # is 0 element of string a?
 
+# 9) Various params number:  
+# args - returns lists
+# kwargs - returns kwargs
+def fun1(x, y, *args, **kwargs):
+    print(x, y, args, kwargs)
+    if args:
+        print("args[0]: {}".format(args[0]))  # args[0]: 3
+    if kwargs:
+        print("kwargs ['parameter']: {}".format(kwargs.get('parameter')))  # kwargs ['parameter']: 1
+
+fun1(1, 2)                      # 5 10 () {}
+fun1(1, 2, 3, 4)                # 1 2 (3, 4) {}
+fun1(1, 2, 3, 4, parameter=1)   # 1 2 (3, 4) {'param': 1}
+fun1(1, 2, 3, 4, param=1)       # kwargs ['parameter']: None
+
+# 10) Named params:
+fun(a=3, d=4):
+    
+# 11) Parameters packing and unpacking
+def fun2(a, *args):
+    print(a, args)
+    if args:
+        print("args[0]: {}".format(args[0]))
+
+l = [1, 2, 3]
+
+fun2(1, 2)              # 1 (2,)
+fun2(1, 2, l)           # 1 (2, [1, 2, 3])
+fun2(1, 2, *l)          # 1 (2, 1, 2, 3)
+
+def fun3(a, b, c):
+    print(a, b, c)
+    
+fun3(*l)                # 1 2 3
+
+####
+def f1(l):
+    l.append(3)
+
+def f2(l):
+    l = 2   # defines as local 
+
+arg = [2]
+f1(arg)
+print(arg)  # [2, 3]
+
+arg = 1
+f2(arg)
+print(arg)  # 1
+
+# 12) Closures (замыкания)
+
+
 
 
 
