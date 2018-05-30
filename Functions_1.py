@@ -95,6 +95,14 @@ def exampl7(name='Egor'):
 
 exampl7()
 
+# 8) New feature from python 3.5: types of input and putput params
+def new_style(i: int, s:str) -> bool:   # first param should be int, second string, output - bool.
+    return s[i] == 'a'
+
+print(new_style(0, 'abc'))  # is 0 element of string a?
+
+print(new_style("s", 3))
+
 
 
 
