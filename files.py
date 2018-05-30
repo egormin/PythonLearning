@@ -2,7 +2,7 @@
 print("\n***** Otkritie faila *****")
 
 #1 sposob
-myfile = open('file.txt')
+myfile = open('file.txt')  # with encodong: myfile = open('file.txt', encoding='cp1251')
 for line in myfile:
     print(line)
 myfile.close()
