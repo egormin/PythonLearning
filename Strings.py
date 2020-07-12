@@ -1,3 +1,5 @@
+https://realpython.com/python-f-strings/
+
 # 1) Any way ('' or "")
 string1 = 'string1'
 string2 = "string2"
@@ -61,6 +63,13 @@ print(res)
 print("I have {one} and {two} apples".format(one=1, two=2))
 
 print(f"I have {i} apples")   # Available from Python 3.6
+
+name = "Bob"
+templ = "His name is {}"
+print(templ.format(name))
+
+print(f"His name is {name}")
+
 
 # Templates:  (https://docs.python.org/3/library/string.html)
 from string import Template
