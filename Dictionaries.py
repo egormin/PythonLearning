@@ -74,17 +74,15 @@ print(dictNew1)  # {'age': None, 'sex': None, 'name': None}
 dictNew1 = dict.fromkeys(seq, "not set val")  # without default None
 print(dictNew1)  # {'sex': 'not set val', 'age': 'not set val', 'name': 'not set val'}
 
+# 5) Iterations
+students = {"Mike": 19, "Nick": 35, "Shane": 21}
 
+for student in students:
+    print(f"student: {student}: {students[student]}")
 
-
-
-
-
-
-
-
-
-
-
-
-
+# The same
+for student, age in students.items():
+    print(f"student: {student}, {age}")
+    
+# Summ of values
+print(sum(students.values()))
