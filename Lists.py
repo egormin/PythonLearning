@@ -190,5 +190,34 @@ spisok1 = [1, 2, 3]
 spisok2 = [1, 2, 5, 6]
 Newspis = list((zip(spisok1, spisok2)))
 print(Newspis)  # [(1, 1), (2, 2), (3, 5)]  Objediniayutsya tak: (spis1[0], spis2[0]), (spis1[1], spis2[1]).....
+                        
+                        
+# Iterations and destructions
+students = {"Mike": 19, "Nick": 35, "Shane": 21}
+print(list(students.items()))  # [('Mike', 19), ('Nick', 35), ('Shane', 21)]
 
+people = [
+    ("Bob", 42, "mechanic"),
+    ("Mike", 32, "doctor"),
+    ("John", 55, "judge"),
+]
+                        
+for person in people:
+    print(f"Name: {person[0]}, age: {person[1]}, job: {person[2]}")
+
+# Or the same
+for name, age, job in people:
+    print(f"Name: {name}, age: {age}, job: {job}")
+                        
+# Use _ if param is not needed                        
+person = ("Bob", 42, "mechanic")
+name, _, job = person
+print(name, job)
+                        
+# head, tail
+head, *tail = [1, 2, 3, 4, 5]
+print(head)
+print(*tail)
+
+                        
 
