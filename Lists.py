@@ -155,6 +155,18 @@ print(fibs)
 int_list = [1, 2, 3, 4]
 doubled = [num * 2 for num in int_list]
 
+friends = ['Sam', 'Smith', 'Ell', 'Mike']
+starts_s = []
+
+for friend in friends:
+    if friend.startwith("S"):   
+        starts_s.append(friend")
+                      
+# Or the same:                     
+friends = ['Sam', 'Smith', 'Ell', 'Mike']
+starts_s = [friend for friend in friends if friend.startswith("S")]
+                        
+
 # 8) Operacii so spiskami
 print("\n***** Operacii so spiskami *****")
 # kopiya spiska
