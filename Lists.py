@@ -150,6 +150,11 @@ for i in range(n - 2):
     fibs.append(fibs[i] + fibs[i + 1])  # [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 print(fibs)
 
+
+# One line iteration
+int_list = [1, 2, 3, 4]
+doubled = [num * 2 for num in int_list]
+
 # 8) Operacii so spiskami
 print("\n***** Operacii so spiskami *****")
 # kopiya spiska
