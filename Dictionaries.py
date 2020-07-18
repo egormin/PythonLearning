@@ -86,3 +86,24 @@ for student, age in students.items():
     
 # Summ of values
 print(sum(students.values()))
+
+
+# Dictionary comprehensions
+users = [
+    (0, "Bob", 'mypass'),
+    (1, "Mike", "pass2"),
+    (2, "John", "johnpass")
+]
+
+username_mapping = {user[1]: user for user in users}
+print(username_mapping)
+
+test_user = "Bob"
+
+_, username, password = username_mapping[test_user]
+print(_)
+print(username)
+print(password)
+
+if test_user == username:
+    print("ok")
