@@ -150,6 +150,14 @@ function()
 
 print(var)
 
+# Lambda functions:
+print((lambda x, y: x + y)(5, 7))
+
+lambda x, y: x + y
+# The same
+def add(x, y)
+  return x + y
+
 
 
 
