@@ -158,6 +158,22 @@ lambda x, y: x + y
 def add(x, y)
   return x + y
 
+# List comprehensions
+sequence = [1, 2, 3]
+doubled = [double(x) for x in sequence]
+# The same
+doubled1 = [(lambda x: x * 2)(x)for x in sequence]
+# The same
+doubled2 = list(map(lambda x: x * 2, sequence))
+# The same
+doubled3 = list(map(double, sequence))
+
+print(doubled)
+print(doubled1)
+print(doubled2)
+print(doubled3)
+# [2, 4, 6]
+
 
 
 
