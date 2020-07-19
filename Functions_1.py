@@ -120,6 +120,41 @@ fun1(1, 2, 3, 4, param=1)       # kwargs ['parameter']: None
 fun(a=3, d=4):
     
 # 11) Parameters packing and unpacking
+def sum(*args):
+    print(args)
+
+sum(1, 2, 3)  # (1, 2, 3)
+
+# another example. The list will be unpacked to separate parameters
+def xy(x, y):
+    print(x)
+    print(y)
+
+nums = [2, 4]
+xy(*nums)
+# 2
+# 4
+
+# another example. In this case "x" in dict should be named the same as param in function xy
+def xy(x, y):
+    print(x)
+    print(y)
+ 
+xxx = {"x": 1, "y": 2}
+xy(**xxx)
+# 1
+# 2
+
+# another example
+def multiply(*args):
+    total = 1
+    for arg in args:
+        total *= arg
+    print(total)
+
+multiply(1, 2, 3, 5) # 30
+
+# another example
 def fun2(a, *args):
     print(a, args)
     if args:
