@@ -154,6 +154,18 @@ def multiply(*args):
 
 multiply(1, 2, 3, 5) # 30
 
+# Unpaking and named parameter combination
+def apply(*args, operator):
+    if operator == '*':
+        return multiply(args)
+    elif operator == '+':
+        return sum(args)
+    else:
+        return "No valid operator provided"
+
+print(apply(1, 2, 3, 5, operator='+'))
+# 11
+
 # another example
 def fun2(a, *args):
     print(a, args)
@@ -195,6 +207,46 @@ def outer(a):
 closure = outer(1)
 print(closure(2))    # 3
 
+# 13) kwargs (Used for named arguments) (*args used for positional arguments)
+
+#**kwargs makes dictionary
+
+def learn_kwargs(**kwargs):
+    print(kwargs)
+
+learn_kwargs(name="Bob", age=15) 
+# {'name': 'Bob', 'age': 15}
+
+# Reverse operation
+def named2(name, age):
+    print(name, age)
+
+param = {'name': 'Bob', 'age': 15}
+named2(**param)  
+# Bob 15
+
+# Another example
+def named(**kwargs):
+    print(kwargs)
+    
+def print_nicely(**kwargs):
+    named(**kwargs)
+    for arg, value in kwargs.items():
+        print(f"{arg} {value}")
+
+print_nicely(name="Bob", age=15)
+# {'name': 'Bob', 'age': 15}
+# name Bob
+# age 15
+
+# *args and **kwargs together
+def both(*args, **kwargs):
+    print(args)
+    print(kwargs)
+
+both(1, 2, 3, name='Bob', age=30)
+# (1, 2, 3)
+# {'name': 'Bob', 'age': 30
 
 
 
